@@ -1,0 +1,143 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+header{
+  width: 100%;
+  height: 5em;
+  display: flex;
+  gap:0 0.6em;
+  padding: 0.7em;
+  box-sizing: border-box;
+}
+
+.logo-container{
+  width:5%;
+  height: 100%;
+  visibility: hidden;
+  background-color: pink;
+}
+
+.header-content-bar{
+  width: 95%;
+  height: 100%;
+  background-color: navy;
+}
+
+.product-container{
+  display: flex;
+  padding:0 0.7em 0.7em 0.7em;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  gap: 0.6em 0.5em;
+}
+
+.product-card{
+  width:calc(100% / 2 - 1em);
+  height: 300px;
+  
+  .product-head{
+    width: 90%;
+    height: 50%;
+    margin: 5% 5% 0 5%;
+    box-sizing: border-box;
+    background-color: gainsboro;
+  }
+  .product-body{
+    width: 90%;
+    height:10%;
+    background-color: navy;
+    margin: 5% 5% 0 5%;
+  }
+  .product-content{
+    width: 90%;
+    height: 10%;
+    margin: 5% 5% 0 5%;
+    box-sizing: border-box;
+    background-color: gainsboro;
+  }
+  
+}
+
+/* media query for mobile */
+@media screen and (max-width:480px){
+  header{
+    width: 100%;
+    height: 3rem;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .logo-container{
+    display: none;
+  }
+  .header-content-bar{
+    width: 100%;
+    
+    height: 100%;
+  }
+  .product-container{
+    display: display;
+    padding:0 0.7em 0.7em 0.7em;
+    
+  }
+  
+  .product-card{
+    width:100%;
+    height: 400px;
+  
+    
+  }
+}
+
+
+/* media query for large laptop or large tablet */
+@media screen and (min-width:767px)and (max-width:1024px){
+  .logo-container{
+    width:20%;
+    height: 100%;
+    visibility: visible;
+  }
+  .header-content-bar{
+    width: 90%;
+    
+    height: 100%;
+  }
+  .product-container{
+    display: flex;
+    padding:0 0.7em 0.7em 0.7em;
+    flex-wrap:wrap;
+    gap: 0.6em .5em;
+    
+  }
+  
+  .product-card{
+    width:calc(100% / 3 - 1.5em);
+    height: 400px;
+  }
+}
+
+
+/* media query for large display */
+@media screen and (min-width:1024px){
+  .logo-container{
+    width: 30%;
+    height: 100%;
+    visibility: visible;
+  }
+  .header-content-bar{
+    width: 70%;
+    height: 100%;
+  }
+  .product-container{
+    display: flex;
+    padding:0 0.7em 0.7em 0.7em;
+    flex-wrap:wrap;
+    gap: 0.6em 0.5em;
+    
+  }
+  
+  .product-card{
+    width:calc(100% / 4 - 2em);
+    height:calc(100vh - 5.5em); 
+  }
+}
